@@ -9,9 +9,9 @@ postsRouter.use((req, res, next) => {
 });
 
 postsRouter.get("/", async (req, res) => {
-  const users = await getAllPosts();
+  const posts = await getAllPosts();
   res.send({
-    posts: [],
+    posts,
   });
 });
 module.exports = postsRouter;
